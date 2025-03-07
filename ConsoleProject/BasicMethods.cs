@@ -16,17 +16,22 @@ namespace ConsoleProject
 
         public string ReverseString(string input)
         {
-            //Stack LIFO
+            // Stack follows LIFO
             Stack<char> stack = new Stack<char>();
             StringBuilder sb = new StringBuilder();
-            foreach(char c in input)
+
+            // Push each character onto the stack
+            foreach (char c in input)
             {
                 stack.Push(c);
             }
-            for (int i = 0; i < stack.Count; i++)
+
+            // Pop characters to reverse the string
+            while (stack.Count > 0)
             {
                 sb.Append(stack.Pop());
             }
+
             return sb.ToString();
         }
 
