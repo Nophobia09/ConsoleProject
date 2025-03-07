@@ -28,4 +28,16 @@ public class AdvancedMethods
             }
         return result;
     }
+
+    public int OneWillThrowException(int value)
+    {
+        if (value == 1)
+        {
+            throw new Exception("You entered 1, Exception Occured!");
+        }
+        else
+        {
+            return value;
+        }
+    }
 }

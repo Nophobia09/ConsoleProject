@@ -109,5 +109,19 @@ namespace MSTest
             //Assert
             Assert.AreEqual(expected, result);
         }
+        
+        [TestMethod]
+        [DataRow(0, 0)]
+        [DataRow(int.MaxValue, int.MaxValue)]
+        [DataRow(1, 1)]
+        public void TestOneWillThrowException(int value, int expected)
+        {
+            //Arrange
+            ConsoleProject.AdvancedMethods advanced = new ConsoleProject.AdvancedMethods();
+            //Act
+            int result = advanced.OneWillThrowException(value);
+            //Assert
+            Assert.AreEqual(expected, result);
+        }
     }
 }
